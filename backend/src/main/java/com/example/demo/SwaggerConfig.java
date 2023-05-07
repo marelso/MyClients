@@ -15,7 +15,7 @@ public class SwaggerConfig {
     @Bean
     public Docket offersApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("")
+                .groupName("V1")
                 .select()
                 .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
                 .paths(PathSelectors.any())
@@ -25,7 +25,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Aqui funciona")
+                .title("MyClients trainee")
                 .build();
     }
 
